@@ -18,6 +18,10 @@ bootJar {
     version =  '0.1.0'
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
+
 repositories {
     mavenCentral()
 }

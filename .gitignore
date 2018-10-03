@@ -12,6 +12,7 @@
 
 # Package Files #
 *.jar
+!getting-to-philosophy-api/gradle/wrapper/gradle-wrapper.jar
 *.war
 *.nar
 *.ear
@@ -30,7 +31,7 @@ hs_err_pid*
 /out-tsc
 
 # dependencies
-/node_modules
+*/node_modules
 
 # IDEs and editors
 /.idea
