@@ -18,19 +18,27 @@ This will also run the H2 console at `http://localhost:8080/h2-console`, which a
 
 ### Response
 
-An example success response is shown below for starting at [Cactus](https://en.wikipedia.org/wiki/cactus). 
+An example success response is described and shown below for starting at [Cactus](https://en.wikipedia.org/wiki/cactus). 
+
+* `hops` - Displays number of hops taken from starting Wikipedia article
+* `foundPhilosophy` - Displays whether or not Philosophy was reached
+* `content` - Short message about results
+* `pathNodes` - Path of Wikipedia articles taken
+    * `title` - Title of Wikipedia article
+    * `url` - URL of Wikipedia article
+
+Note: Some content removed from `pathNodes` for brevity.
 
 ```json
   {
-    "hops": 12, /* Displays number of hops taken from starting Wikipedia article */
-    "foundPhilosophy": false, /* Displays whether or not Philosophy was reached */
-    "content": "Found loop", /* Short message about results */
-    "pathNodes": [ /* Path of Wikipedia articles taken */
+    "hops": 12,
+    "foundPhilosophy": false,
+    "content": "Found loop",
+    "pathNodes": [
         {
-            "title": "Cactus", /* Title of Wikipedia article */
-            "url": "https://en.wikipedia.org/wiki/cactus" /* URL of Wikipedia article */
+            "title": "Cactus",
+            "url": "https://en.wikipedia.org/wiki/cactus"
         },
-        /* Some content left out for brevity */
         {
             "title": "Existence",
             "url": "https://en.wikipedia.org/wiki/Existence"
