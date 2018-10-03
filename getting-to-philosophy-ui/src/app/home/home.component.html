@@ -1,0 +1,15 @@
+<p>Enter search term and hit Enter or click Search</p>
+<input #search type="text" (keyup.enter)="findPath(search.value)">
+<button (click)="findPath(search.value)">Search</button>
+
+<div *ngIf="path">
+  <p *ngIf="foundPhilosophy">You found philosophy in {{ hops }} hops!</p>
+  <p *ngIf="!foundPhilosophy">You did not find philosophy and made {{ hops }} hops.</p>
+  
+  <h3>Path taken</h3>
+  <ul>
+    <li *ngFor="let node of pathNodes">
+      <a href="{{ node.url }}" target="_blank">{{ node.title }}</a>
+    </li>
+  </ul>
+</div>
